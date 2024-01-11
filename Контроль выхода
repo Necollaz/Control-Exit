@@ -1,0 +1,27 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        string message = "";
+        string commandExit = "exit";
+
+        bool isExitTyped = false;
+
+        while (isExitTyped == false)
+        {
+            Console.Write($"Введите {commandExit} если хотите завершить программу.");
+            message = Console.ReadLine();
+
+            if (message == commandExit)
+            {
+                isExitTyped = true;
+            }
+            else
+            {
+                Console.WriteLine("Программа не закрыта.");
+            }
+        }
+
+        Console.ReadKey();
+    }
+}
